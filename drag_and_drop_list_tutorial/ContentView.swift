@@ -79,7 +79,9 @@ struct MyDropDelegate : DropDelegate {
     // 드랍변경
     func dropUpdated(info: DropInfo) -> DropProposal? {
 //        print("MyDropDelegate - dropUpdated() called")
-        return nil
+//        return nil
+        // 같은 아이템에 드래그 했을때 +표시 없애기
+        return DropProposal(operation: .move)
     }
     
     // 드랍 유효 여부
